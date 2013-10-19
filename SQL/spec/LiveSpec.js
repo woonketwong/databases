@@ -10,10 +10,11 @@ describe("Persistent Node Chat Server", function() {
   beforeEach(function(done) {
     dbConnection = mysql.createConnection({
     /* TODO: Fill this out with your mysql username */
-      user: "jeffket",
+      user: "root",
     /* and password. */
-      password: "wonglee",
-      database: "chat"
+      password: "",
+      database: "chat",
+      port: 3306
     });
     dbConnection.connect();
 
@@ -40,7 +41,7 @@ describe("Persistent Node Chat Server", function() {
                * posted message there. */
 
               var queryString = "SELECT * from ?? where ?? = ??";
-              var queryArgs = [tablename, 'username', 'Valjean'];
+              var queryArgs = ['messages', 'username', 'Valjean'];
               /* TODO: Change the above queryString & queryArgs to match your schema design
                * The exact query string and query args to use
                * here depend on the schema you design, so I'll leave

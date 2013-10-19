@@ -34,7 +34,7 @@ DROP TABLE IF EXISTS `rooms`;
 
 CREATE TABLE `rooms` (
   `id` TINYINT AUTO_INCREMENT,
-  `roomName` TINYINT,
+  `roomName` VARCHAR(100),
   PRIMARY KEY (`id`)
 );
 
